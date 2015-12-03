@@ -176,7 +176,19 @@ undefined
 
 
 
+function outer(a) {
+	function inner (b) {
+		return a + b;
+	}
 
+	return inner;
+}
+
+var c = outer(7);
+var result = c(10);  // 17
+
+var d = outer(5)
+var result2 = d(10);  //15
 
 
 
@@ -189,12 +201,14 @@ function a() {
 
 	var myDog = {
 		name: 'Max'
-	}
+	};
 
 	function b() {
 		var myObj = {
 			fname: 'Bill'
 		};
+
+		var c = 12;
 
 		myObj.lname = 'Smith';
 		myDog.age = 12;

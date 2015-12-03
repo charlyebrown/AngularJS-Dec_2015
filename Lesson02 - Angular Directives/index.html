@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
+    <script src="index.js"></script>
+
+    <style type="text/css">
+      
+      .red {
+        color: red;
+      }
+
+      .blue {
+        color: blue;
+      }
+
+      .green {
+        color: green;
+      }
+
+    </style>
+  </head>
+
+  <body ng-app="myApp">
+    <div ng-controller="MainCtrl as ctrl">
+
+      <h1 ng-bind="ctrl.greeting"></h1>
+      <!-- <h3> {{ ctrl.greeting }} </h3> -->
+
+      <h3>Simple ng-repeat</h3>
+      <ul>
+        <li ng-repeat="item in ctrl.simpleArray">
+          <div ng-bind="ctrl.greeting"></div>
+           <span ng-bind="item"></span> is at index <span ng-bind="$index"></span>
+        </li>
+      </ul>
+
+      <h3>Intermediate ng-repeat</h3>
+      <div ng-repeat="person in ctrl.intermediateArray">
+        <span ng-bind="person.name"></span> is 
+        <span ng-bind="person.age"></span> years old.
+      </div>
+
+      <h3>Object ng-repeat</h3>
+      <div ng-repeat="(key, value) in ctrl.myDog">
+        <label ng-bind="key"></label>: <span ng-bind="value"></span>
+      </div>
+
+      <h3>ng-model type:text</h3>
+      <h4 ng-bind="ctrl.user.name"></h4>
+      <input type="text" ng-model="ctrl.user.name"/>
+
+      <h3>ng-class (text)</h3>
+      <h4 ng-class="ctrl.user.name">This is an example of ng-class with text</h4>
+
+      <h3>ng-model type:checkbox</h3>
+      <h4 ng-bind="ctrl.isMale"></h4>
+      <input type="checkbox" ng-model="ctrl.isMale"/>
+
+      <h3>ng-if</h3>
+      <div ng-if="ctrl.isMale">
+          This will only appear if user is a male.
+      </div>
+
+      <h3>ng-class (boolen)</h3>
+      <h4 ng-class="{blue: ctrl.isMale, red:!ctrl.isMale}">This is an example of ng-class with using booleans</h4>
+
+
+<!--       <h3>ng-model type:radio (value)</h3>
+      <h4 ng-bind="ctrl.userSelection"></h4>
+
+      <input type="radio" 
+          name="myRadioButtons" 
+          ng-model="ctrl.userSelection"
+          value="Dog"/> Dog
+
+      <input type="radio" 
+          name="myRadioButtons" 
+          ng-model="ctrl.userSelection"
+          value="Cat"/> Cat
+
+      <input type="radio" 
+          name="myRadioButtons" 
+          ng-model="ctrl.userSelection"
+          value="Hamster"/> Hamster -->
+
+        <h3>ng-model type:radio (ng-value)</h3>
+        <h4 ng-bind="ctrl.userSelection.name"></h4>
+
+        <input type="radio" 
+            name="myRadioButtons" 
+            ng-model="ctrl.userSelection"
+            ng-value="ctrl.dog"/> Dog
+
+        <input type="radio" 
+            name="myRadioButtons" 
+            ng-model="ctrl.userSelection"
+            ng-value="ctrl.cat"/> Cat
+
+        <input type="radio" 
+            name="myRadioButtons" 
+            ng-model="ctrl.userSelection"
+            ng-value="ctrl.hamster"/> Hamster
+
+      <button ng-click="ctrl.onUserClick()">Click Me</button>
+      
+    </div>
+  </body>
+</html>
