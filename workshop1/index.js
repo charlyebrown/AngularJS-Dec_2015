@@ -10,15 +10,15 @@ angular.module('nameApp', []).controller('MainCtrl', function(){
 	
 	self.editInfo = function(){
 		self.isEditing = false;
-		self.fname1 = self.fname;
-		self.lname1 = self.lname;
+		self.fname1 = angular.copy(self.fname);
+		self.lname1 = angular.copy(self.lname);
 	};
 
 	self.isEditing = true;
 
 	self.saveEdits = function(){
-		self.fname = self.fname1;
-		self.lname = self.lname1;
+		self.fname = angular.copy(self.fname1);
+		self.lname = angular.copy(self.lname1);
 		self.isEditing = true;
 	};
 
