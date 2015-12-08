@@ -6,9 +6,52 @@
 </head>
 <body ng-app="myApp">
     <div ng-controller="MainCtrl as ctrl">
-        <div ng-bind="ctrl.greeting">
+        <div ng-bind="ctrl.greeting"></div>
+        <button ng-click="ctrl.onUserClick()">Click Me</button>
+        <h3>Simple NG-Repeat</h3>
+        <ul>
+        	<li ng-repeat="item in ctrl.simpleArray"><span ng-bind="item"></span></li>
+        </ul>
 
+        <h3> Intermediate ng-repeat</h3>
+        <div ng-repeat="person in ctrl.intermediateArray">
+        	<span ng-bind="person.name"></span>is
+        	<span ng-bind="person.age"></span> years old.
         </div>
+
+        <h3> Intermediate ng-repeat</h3>
+        <div ng-repeat="(key,value) in ctrl.myDog"></div>
+        <label ng-bind="key"></label>: <span ng-bind="value"></span>
+
+        <h3> ng-model type:radio</h3>
+        <h4 ng-bind="ctrl.isMale"></h4>
+        <input type="radio" 
+    	   name="myRadioButtons" 
+    	   ng-model="ctrl.userSelection"
+    	   ng-value="ctrl.amster"/>Hamster
+		<input type="radio" 
+		   name="myRadioButtons" 
+		   ng-model="ctrl.userSelection"
+		   ng-value="ctrl.dog"/>Dog
+	   <input type="radio" 
+		   name="myRadioButtons" 
+		   ng-model="ctrl.userSelection"
+		   ng-value="ctrl.cat"/>Cat
+
+		<h3>ng-if vs ng-show/hide</h3>
+		<div>
+			<input type="checkbox" ng-model="ctrl.ifUnput">if-check
+			<div ng-if="ctrl.ifInput" style="color: green;">
+				<h4>if content</h4>
+				wlekjrlkjlkjaer
+				lkwjerlkewj
+				lkjwlejrljbw
+				lkwjerljbw
+				lkjwelrjwelkjbiowenr
+				bserljbklserw
+			</div>	
+		</div>
+
 
     </div>
 </body>
