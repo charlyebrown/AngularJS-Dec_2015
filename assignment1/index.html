@@ -9,17 +9,17 @@
 			<span ng-repeat="color in ctrl.colors">
 				<input 
 					type="radio" 
-		            name="myColorSelection"
-		            id="color" 
-		            ng-model="ctrl.colorSelection"
-		            ng-value="color"/>	
+            name="myColorSelection"
+            id="color" 
+            ng-model="ctrl.colorSelection"
+            ng-value="color"/>	
 		        <label for="color" ng-bind="color"></label>
 	        </span>	
 			
 			<br>
 
-            <div class="div1" ng-class="ctrl.colorSelection">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. DExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-            <div class="div2" ng-class="ctrl.colorSelection">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>	
+          <div class="div1" ng-class="ctrl.colorSelection">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. DExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+          <div class="div2" ng-class="ctrl.colorSelection">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>	
 		</div>
 
 		<div class="folderAssignment">
@@ -30,7 +30,6 @@
 						<p ng-repeat="item in folder.items" ng-bind="item"></p>
 					</li>
 				</ul>
-					
 			</div>
 			<div class="inputDisplay">
 				
