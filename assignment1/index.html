@@ -26,6 +26,7 @@
 			<div class="folderDisplay">
 				<ul >
 					<li ng-repeat="folder in ctrl.folders" ng-bind="folder.name">
+						<p ng-bind="folder.items"></p>
 						<p ng-repeat="item in folder.items" ng-bind="item"></p>
 					</li>
 				</ul>
