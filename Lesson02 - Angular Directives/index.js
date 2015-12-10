@@ -3,8 +3,15 @@ var myApp = angular.module('myApp', []);
 
 
 
-myApp.controller('MainCtrl', function() {
+myApp.controller('MainCtrl', function($scope) {
+
+
   var self = this;
+
+
+  // self.user = {
+  //   name: 'George'
+  // }
 
   self.greeting = 'Hello World!';
 
