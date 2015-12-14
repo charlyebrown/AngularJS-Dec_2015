@@ -13,4 +13,11 @@ angular.module('assignment1', []).controller('MainCtrl', function(){
 
 	self.collapseAll = false;
 
+	self.folderSelection = self.folders[0];
+
+	self.addItemToFolder = function(){
+		self.folderSelection.items.push(self.itemToAdd);
+		self.itemToAdd= null;
+	}
+
 });

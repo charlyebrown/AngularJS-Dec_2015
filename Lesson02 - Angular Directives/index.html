@@ -42,12 +42,12 @@
       </div>
 
       <h3>Object ng-repeat</h3>
-      <div ng-repeat="(key, value) in ctrl.myDog">
+      <div ng-repeat="(key, value) in ::ctrl.myDog">
         <label ng-bind="key"></label>: <span ng-bind="value"></span>
       </div>
 
       <h3>ng-model type:text</h3>
-      <h4 ng-bind="ctrl.user.name"></h4>
+      <h4 ng-bind="::ctrl.user.name"></h4>
       <input type="text" ng-model="ctrl.user.name"/>
 
       <h3>ng-class (text)</h3>
@@ -64,6 +64,29 @@
 
       <h3>ng-class (boolen)</h3>
       <h4 ng-class="{blue: ctrl.isMale, red:!ctrl.isMale}">This is an example of ng-class with using booleans</h4>
+
+
+      <h3>ng-if vs ng-show/hide</h3>
+      <div>
+        <input type="checkbox" ng-model="ctrl.ifInput">if-check
+        <div ng-if="ctrl.ifInput" style="color: green;">
+          <h4>ng-if content</h4>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        </div>
+
+        <input type="checkbox" ng-model="ctrl.showInput">show-check
+        <div ng-show="ctrl.showInput" style="color: blue;">
+          <h4>ng-show content</h4>
+          Show
+        </div>
+        <div ng-hide="ctrl.showInput" style="color: blue;">
+          <h4>ng-show content</h4>
+          Hide
+        </div>
+
+      </div>
 
 
 <!--       <h3>ng-model type:radio (value)</h3>
