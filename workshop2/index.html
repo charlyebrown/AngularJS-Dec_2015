@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Workshop 2</title>
+</head>
+<body ng-app="gradingAssignment" ng-controller="gradingAssignmentController as ctrl">
+	<label>Assignment</label>
+	<input type="text" ng-model="ctrl.assignment.name"/>	
+	<label>Grade</label>
+	<input type="number" min="0" step="1" ng-model="ctrl.assignment.grade"/>
+	<button ng-click="ctrl.addAssignmentAndGrade()">Add</button>
+
+	<div>
+		<ul>
+			<li ng-repeat="assignment in ctrl.assignments" ng-bind="assignment.name">			
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
