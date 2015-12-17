@@ -2,17 +2,24 @@
 <html>
 <head>
 	<title>Workshop 2</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
+	<script src="currentGrades.js"></script>
+	<script src="assignmentFactory.js"></script>
+	<script src="calculatorService.js"></script>
+    <script src="index.js"></script>
+    
+    
 </head>
-<body ng-app="gradingAssignment" ng-controller="gradingAssignmentController as ctrl">
-	<label>Assignment</label>
-	<input type="text" ng-model="ctrl.assignment.name"/>	
-	<label>Grade</label>
-	<input type="number" min="0" step="1" ng-model="ctrl.assignment.grade"/>
-	<button ng-click="ctrl.addAssignmentAndGrade()">Add</button>
+<body ng-app="gradingAssignment" ng-controller="MainCtrl as ctrl">
+	<div ng-controller="assignmentCreatorController as ctrl">
+		<label>Assignment</label>
+		<input type="text" ng-model="ctrl.assignmentToAdd.name"/>	
+		<label>Grade</label>
+		<input type="number" min="0" step="1" ng-model="ctrl.assignmentToAdd.grade"/>
+		<button ng-click="ctrl.addAssignmentAndGrade()">Add</button>
 
-	<div>
 		<ul>
-			<li ng-repeat="assignment in ctrl.assignments" ng-bind="assignment.name">			
+			<li ng-repeat="assignment in ctrl.current_grades" ng-bind="assignment.name">			
 			</li>
 		</ul>
 	</div>
