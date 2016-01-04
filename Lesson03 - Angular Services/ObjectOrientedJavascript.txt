@@ -1,0 +1,39 @@
+function Car() {
+    this.make = "Ford";
+    this.model = "Escort";
+    this.year = 1960;
+    this.age = 55;
+}
+undefined
+Car()
+undefined
+var myCar = new Car();
+undefined
+myCar
+Car {make: "Ford", model: "Escort", year: 1960, age: 55}
+var your = new Car();
+undefined
+var his = new Car();
+undefined
+Car.prototype.setYear = function(year) {
+   this.year = year;
+   this.age = 2015 - year;
+}
+(year) {
+   this.year = year;
+   this.age = 2015 - year;
+}
+var myCar = new Car();
+undefined
+var yourCar = new Car();
+undefined
+myCar.setYear(1990)
+undefined
+your.setYear(2000)
+undefined
+yourCar.setYear(2000)
+undefined
+myCar
+Car {make: "Ford", model: "Escort", year: 1990, age: 25}
+yourCar
+Car {make: "Ford", model: "Escort", year: 2000, age: 15}
