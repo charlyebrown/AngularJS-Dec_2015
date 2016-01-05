@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
+	    <script src="index.js"></script>
+	</head>
+	<body ng-app='nameApp'>
+		<div ng-controller="MainCtrl as ctrl">
+			<div ng-show="ctrl.isEditing">
+				<div>First Name: <span ng-bind="ctrl.fname"></span></div>
+				<div>Last Name: <span ng-bind="ctrl.lname"></span></div>
+				<div>Email: <span ng-bind="ctrl.email"></span> </div>
+				<button ng-click="ctrl.editInfo()">Edit</button>
+			</div>
+
+			<div ng-hide="ctrl.isEditing">
+				<div>First Name: <input ng-model="ctrl.fname1"/></div>
+				<div>Last Name: <input ng-model="ctrl.lname1"></div>
+				<div>Email: <span ng-bind="ctrl.email"></span> </div>
+				<button ng-click="ctrl.saveEdits()">Done</button>
+				<button ng-click="ctrl.cancelEdits()">Cancel</button>
+			</div>
+		</div>
+	</body>
+</html>

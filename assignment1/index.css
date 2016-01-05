@@ -1,0 +1,74 @@
+.div1, .div2 {
+	width: 30%;
+	float: left;
+}
+.folderAssignment {
+	width: 80%;
+	float: left;
+}
+
+.folderDisplay{
+	width: 40%;
+	display: inline-block;
+}
+.inputDisplay{
+	width: 40%;
+	display: inline-block;
+}
+body.red {
+	background-color: FFC0C0;
+}
+body.blue {
+ 	background-color: BCC0EE;
+}
+body.green  {
+	background-color: B8F4B8;
+}
+body.purple {
+   background-color: D7B6ED;
+}
+body.none {
+	background-color:
+}
+
+.red.div1 {
+	background-color: AA3939;
+	color: FFAAAA;
+}	
+.blue.div1 {
+	background-color: 191F58;
+	color: 7d82b0;
+}	
+.green.div1 {
+	background-color: 0F5A32;
+	color: 78B494;
+}	
+.purple.div1 {
+	background-color: 3D1255;
+	color: 9775AA;
+}	
+.none.div1 {
+	background-color: 646265;
+	color: black;
+}	
+
+.red.div2 {
+	background-color: D46A6A;
+	color: FFAAAA;
+}	
+.blue.div2 {
+	background-color: 535993;
+	color: 7d82b0;
+}	
+.green.div2 {
+	background-color: 4B966E;
+	color: 78B494;
+}	
+.purple.div2 {
+	background-color: 764B8E;
+	color: 9775AA;
+}	
+.none.div2 {
+	background-color: 312F33;
+	color: black;
+}	

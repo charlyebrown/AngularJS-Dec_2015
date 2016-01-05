@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script> 
+    <script src="playlistFactory.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  </head>
+  <body ng-app="PlaylistApp">
+  	<div class="container">
+	  	<div class="row" ng-controller="PlaylistController as playlistCtrl">
+		  	<div class="me col-md-3" >
+		  		<h2>About Me</h2>
+		  		<label>Name</label>
+		  		<input type="text"/>
+		  		<label>Age</label>
+		  		<input type="text"/>
+		  	</div>
+		  	
+		  	<div class="genre col-md-3" >
+		  		<h2>Genres</h2>
+			  	<div ng-repeat="genre in playlistCtrl.genres">
+			  		<input 
+			  			ng-change="playlistCtrl.genreSelected()"
+			  			type="radio"
+			  			name="genreSelection"
+			  			id="genre"
+			  			ng-model="playlistCtrl.genreSelection"
+			  			ng-value="genre"/>
+			  		<label for="genre" ng-bind="genre"></label>
+			  	</div>
+		  	</div>
+		  	<div class="type col-md-3">
+		  		<h2>Clean or Explicit?</h2>
+		  		<div ng-repeat="type in playlistCtrl.types">
+			  		<input 
+			  			ng-change="playlistCtrl.typeSelected()"
+			  			type="radio"
+			  			name="typeSelection"
+			  			id="type"
+			  			ng-model="playlistCtrl.typeSelection"
+			  			ng-value="type"/>
+			  		<label for="type" ng-bind="type"></label>
+		  		</div>
+		  	</div>
+		  	<div class="songs col-md-3">
+	  			<h2>Songs</h2>
+	  				<span ng-repeat="title in playlistCtrl.songs[playlistCtrl.genreSelection]">
+	  					<input
+	  						ng-model="playlist.songSelection[playlistCtrl.genreSelection]"
+	  						ng-click="playlistCtrl.songSelected(title)"
+		  					type="checkbox"
+		  					name="titleSelection"
+		  					id="title"
+		  					ng-value="title"/>
+	  					<label for="title" ng-bind="title"></label>
+	  				</span>
+	  			</div>
+	  		</div>
+	  		<div class="col-md-3">
+	  			<button ng-click="playlistCtrl.showPlaylist()">Submit</button>
+	  		</div>
+	  	</div>
+  	</div>
+  	
+  </body>
+ </html>
+
+ <input 
+					

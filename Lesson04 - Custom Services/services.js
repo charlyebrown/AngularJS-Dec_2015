@@ -101,6 +101,12 @@ angular.module('MyServicesModule', [])
 
 
 
+.value('FOLDERS', [
+    {name: 'Pictures', size: '12 KB'},
+    {name: 'Movies', size: '15 KB'},
+    {name: 'Personal', size: '52 KB'},
+])
+
 .factory('CarDTO', function() {
 
     function CarDTO() {
