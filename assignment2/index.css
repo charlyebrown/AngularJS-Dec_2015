@@ -1,9 +1,12 @@
+.buttons {
+	margin-bottom: 10px;
+}
 .square {
-	width: 150px;
-	height: 150px;
-	display: inline-block;
 	border-radius: 25px;
 	border: 2px solid black;
+	display: inline-block;
+	height: 150px;
+	width: 150px;
 }
 ._1 {
 	background-color: green;

@@ -7,18 +7,26 @@
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	    <link rel="stylesheet" type="text/css" href="index.css">
 	</head>
-	<body ng-app='nameApp'>
+	<body ng-app='Simon'>
 		
 		
 			<div class="container" ng-controller="MainCtrl as ctrl">
 				<div class="page-header">
     				<h2>Welcome to Simon!</h1>      
  				</div>
-				<div class="square _1" ng-model="ctrl.litUp"></div>
-				<div class="square _2" ng-model="ctrl.litUp"></div>
-				<br/>
-				<div class="square _3" ng-model="ctrl.litUp"></div>
-				<div class="square _4" ng-model="ctrl.litUp"></div>
+ 				<div class="row">
+ 					<div class="col-md-12">
+ 						<button class="buttons btn btn-default" ng-click="ctrl.startSimon()">Start Simon</button>
+ 					</div>	
+ 				</div>
+ 				<div class="row">
+					<div class="col-md-6 square _1" ng-model="ctrl.litUp"></div>
+					<div class="col-md-6 square _2" ng-model="ctrl.litUp"></div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 square _3" ng-model="ctrl.litUp"></div>
+					<div class="col-md-6 square _4" ng-model="ctrl.litUp"></div>
+				</div>
 			</div>
 		</div>
 	</body>
