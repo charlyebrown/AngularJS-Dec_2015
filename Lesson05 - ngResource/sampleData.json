@@ -91,36 +91,5 @@
     ],
     "greeting": "Hello, Kelly Miles! You have 10 unread messages.",
     "favoriteFruit": "strawberry"
-  },
-  {
-    "_id": "54e266076babc91dbb183eca",
-    "index": 3,
-    "guid": "9b9da84e-704f-462c-93ca-a503cd839497",
-    "isActive": false,
-    "balance": "$1,211.05",
-    "picture": "http://placehold.it/32x32",
-    "age": 35,
-    "eyeColor": "blue",
-    "name": "Rosa Oneill",
-    "gender": "female",
-    "company": "LYRIA",
-    "email": "rosaoneill@lyria.com",
-    "phone": "+1 (915) 531-3666",
-    "address": "352 Rutland Road, Curtice, Alaska, 8935",
-    "about": "Deserunt tempor officia est magna pariatur deserunt magna tempor aute. Velit nulla ullamco consequat eu adipisicing ex veniam velit cillum aliquip. Do cupidatat elit consequat incididunt cillum tempor eu commodo magna dolore do ad fugiat magna. Incididunt duis in in id magna laborum aliqua. Excepteur non fugiat eu dolore laboris do ad ex qui. Id consequat Lorem cupidatat anim minim irure.\r\n",
-    "registered": "2014-04-29T13:20:51 +04:00",
-    "latitude": -37.326596,
-    "longitude": 127.823774,
-    "tags": [
-      "incididunt",
-      "cupidatat",
-      "reprehenderit",
-      "laborum",
-      "velit",
-      "labore",
-      "aliqua"
-    ],
-    "greeting": "Hello, Rosa Oneill! You have 3 unread messages.",
-    "favoriteFruit": "strawberry"
   }
 ]

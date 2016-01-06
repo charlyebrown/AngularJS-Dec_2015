@@ -17,6 +17,15 @@
       
         <div ng-repeat="person in ctrl.people">
           <label ng-bind="person.name"></label>
+          <button ng-click="ctrl.displayFriends(person)">Show Friends</button>
+          <div>
+            <h3>Friends:</h3>
+              <div ng-repeat="friend in person.friends">
+                <label ng-bind="friend.name"></label>
+                <br/>
+                <br/>
+              </div>
+          </div>
           <br/>
           <br/>
         </div>
