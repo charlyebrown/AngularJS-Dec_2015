@@ -12,7 +12,6 @@ angular.module('myApp', ['MyServicesModule'])
 	// .then(function onSuccess(response) {
 	// 	self.people = response;
 	// }, function onError(error) {
-
 	// });
 
 	MyResource.query({
