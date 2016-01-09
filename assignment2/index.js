@@ -6,7 +6,10 @@ angular.module('Simon', [])
 	self.startSimon = function(){
 		console.log("You are starting a Simon Game!!");
 	}
-	self.lightUp = function() {
-		console.log("You clicked on a tile!");
+	self.lightUp = function(color) {
+		console.log("You clicked on " +  color + " tile");
+		self.currentColor = color;
+		console.log("Current color is " + self.currentColor);
 	}
+
 })

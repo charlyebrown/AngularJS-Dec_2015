@@ -20,15 +20,15 @@
 .blue {
 	background-color: blue;
 }
-.green.lit_up{
-	background-color: green;
+.green.litUp{
+	background-color: white;
 }
-.red.lit_up {
-	background-color: red;
+.red.litUp {
+	background-color: white;
 }
-.yellow.lit_up {
-	background-color: yellow;
+.yellow.litUp {
+	background-color: white;
 }
-.blue.lit_up {
-	background-color: blue;
+.blue.litUp {
+	background-color: white;
 }

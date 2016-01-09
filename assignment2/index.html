@@ -20,7 +20,7 @@
  					</div>	
  				</div>
  				<div ng-repeat="color in ctrl.colors">
- 					<div class="col-md-6 square" ng-class={{color}} ng-click="ctrl.lightUp()"></div>
+ 					<div class="col-md-6 square {{color}}" ng-class="{'litUp': ctrl.currentColor == color}" ng-click="ctrl.lightUp(color)"></div>
 				</div>
 			</div>
 		</div>
