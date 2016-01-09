@@ -19,13 +19,8 @@
  						<button class="buttons btn btn-default" ng-click="ctrl.startSimon()">Start Simon</button>
  					</div>	
  				</div>
- 				<div class="row">
-					<div class="col-md-6 square _1" ng-model="ctrl.litUp"></div>
-					<div class="col-md-6 square _2" ng-model="ctrl.litUp"></div>
-				</div>
-				<div class="row">
-					<div class="col-md-6 square _3" ng-model="ctrl.litUp"></div>
-					<div class="col-md-6 square _4" ng-model="ctrl.litUp"></div>
+ 				<div ng-repeat="color in ctrl.colors">
+ 					<div class="col-md-6 square" ng-class={{color}} ng-click="ctrl.lightUp()"></div>
 				</div>
 			</div>
 		</div>

@@ -17,9 +17,9 @@ angular.module("PlaylistApp",["playlistFactory"])
 			console.log('you selected Pop Songs')
 			console.log(self.genreSelection)
 		} else if (self.genreSelection === 'Rock') {
-			console.log('you ou selected Rock Songs')
+			console.log('you selected Rock Songs')
 		} else {
-			console.log('ou selected Rap Songs')
+			console.log('you selected Rap Songs')
 		}
 	}
 

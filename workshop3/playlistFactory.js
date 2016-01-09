@@ -4,6 +4,10 @@ angular.module("playlistFactory",[])
 		var self = this;
 		var selectedSongs = [];
 	}
+	this.prototype.addSongs = function (){
+		//add songs and their type to the playlist
+		
+	}
 	return Playlist;
 })
 .value("GENRES", ['Pop', 'Rock', 'Rap'])

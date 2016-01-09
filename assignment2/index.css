@@ -8,27 +8,27 @@
 	height: 150px;
 	width: 150px;
 }
-._1 {
+.green {
 	background-color: green;
 }
-._2 {
+.red {
 	background-color: red;
 }
-._3 {
+.yellow {
 	background-color: yellow;
 }
-._4 {
+.blue {
 	background-color: blue;
 }
-._1.lit_up{
+.green.lit_up{
 	background-color: green;
 }
-._2.lit_up {
+.red.lit_up {
 	background-color: red;
 }
-._3.lit_up {
+.yellow.lit_up {
 	background-color: yellow;
 }
-._4.lit_up {
+.blue.lit_up {
 	background-color: blue;
 }
