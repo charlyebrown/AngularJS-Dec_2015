@@ -1,15 +1,8 @@
-angular.module('Simon', [])
+angular.module('Simon', ['SimonGame'])
 
-.controller('MainCtrl', function(){
+.controller('MainCtrl', function(GameDTO, COLORS, GameFunctions){
 	self = this;
-	self.colors = ['green', 'red','yellow','blue']
-	self.startSimon = function(){
-		console.log("You are starting a Simon Game!!");
-	}
-	self.lightUp = function(color) {
-		console.log("You clicked on " +  color + " tile");
-		self.currentColor = color;
-		console.log("Current color is " + self.currentColor);
-	}
+	self.colors = angular.copy(COLORS);
+	self.gameFunctions = GameFunctions;
 
 })

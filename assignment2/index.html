@@ -8,19 +8,17 @@
 	    <link rel="stylesheet" type="text/css" href="index.css">
 	</head>
 	<body ng-app='Simon'>
-		
-		
 			<div class="container" ng-controller="MainCtrl as ctrl">
 				<div class="page-header">
     				<h2>Welcome to Simon!</h1>      
  				</div>
  				<div class="row">
  					<div class="col-md-12">
- 						<button class="buttons btn btn-default" ng-click="ctrl.startSimon()">Start Simon</button>
+ 						<button class="buttons btn btn-default" ng-click="ctrl.game.startGame()">Start Simon</button>
  					</div>	
  				</div>
  				<div ng-repeat="color in ctrl.colors">
- 					<div class="col-md-6 square {{color}}" ng-class="{'litUp': ctrl.currentColor == color}" ng-click="ctrl.lightUp(color)"></div>
+ 					<div class="col-md-6 square {{color.name}}" ng-class="{'litUp': color.active }" ng-click="ctrl.gameFunctions.lightUp(color)"></div>
 				</div>
 			</div>
 		</div>

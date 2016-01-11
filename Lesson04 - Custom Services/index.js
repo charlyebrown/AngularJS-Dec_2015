@@ -29,7 +29,7 @@
 
 // 	app.controller('ValueCtrl2', function(FOLDERS) {
 // 		var self = this;
-// 		self.folders = angular.copy(FOLDERS);
+// 		self.folders = angular.copy(FOLDERS);cs
 // 	});
 
 // })(angular.module('myApp', ['MyCarModule']));
