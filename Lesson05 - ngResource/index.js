@@ -1,10 +1,24 @@
 
 angular.module('myApp', ['MyServicesModule'])
 
-.controller('MainCtrl', function(MyResource, FriendsResource) {
+.service('MainCtrlDataService', function(PeopleRESTService) {
 	var self = this;
 
-	// MyResource.getPeople({
+	self.getPeopleForCtrl = function(params, onCompletion) {
+		PeopleRESTService.getPeopleList(params, function(isValid, response) {
+			if (isValid) {
+				// create DTO object from the response before giving to ctrl.
+			}
+			onCompletion(isValid, response);
+		});
+	};
+
+})
+
+.controller('MainCtrl', function(MainCtrlDataService, FriendsResource) {
+	var self = this;
+
+	// PeopleResource.getPeople({
 	// 	page: 2,
 	// 	age: 30
 	// })
@@ -14,13 +28,21 @@ angular.module('myApp', ['MyServicesModule'])
 	// }, function onError(error) {
 	// });
 
-	MyResource.query({
-		page: 2,
-		age: 30
-	}, function onSuccess(response) {
-		self.people = response;
-	}, function onError(error) {
+	// PeopleResource.query({
+	// 	page: 2,
+	// 	age: 30
+	// }, function onSuccess(response) {
+	// 	self.people = response;
+	// }, function onError(error) {
 
+	// });
+
+	MainCtrlDataService.getPeopleForCtrl(null, function (isValid, dataToPresent) {
+		if (isValid) {
+			self.people = dataToPresent;
+		} else {
+			self.errorMessage = "Oopps something went went";
+		}
 	});
 
 	self.displayFriends = function(person) {
