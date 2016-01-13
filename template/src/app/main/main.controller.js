@@ -3,10 +3,8 @@
 
   angular
     .module('template')
-    .controller('MainController', MainController);
+    .controller('MainController', function (GoogleResource) {
+        var self = this;
+    });
 
-  /** @ngInject */
-  function MainController() {
-    var self = this;
-  }
 })();

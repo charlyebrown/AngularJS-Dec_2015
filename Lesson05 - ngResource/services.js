@@ -1,14 +1,14 @@
 angular.module('MyServicesModule', ['ngResource'])
 
-.service('PeopleRESTService', function($log, PeopleResource){
+.service('PeopleRESTService', function($log, PeopleResource) {
 	var self = this;
+
 	self.getPeopleList = function(params, onCompletion) {
-		//params first and then the completion handler
-		$log.debug('Getting People List with params: ' params);
+		$log.debug('Getting Poeple List with params: ', params);
 		PeopleResource.getPeople(params).$promise
-		.then(function onSuccess(response){
-			onCompletion(true, response)l
-		}, function onError(error){
+		.then(function onSuccess(response) {
+			onCompletion(true, response);
+		}, function onError(error) {
 			$log.error(error);
 			onCompletion(false, error);
 		});

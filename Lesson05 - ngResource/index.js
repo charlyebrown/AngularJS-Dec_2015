@@ -1,7 +1,8 @@
 
 angular.module('myApp', ['MyServicesModule'])
 
-.service('MainCtrlDataService' function(PeopleRESTService){
+
+.service('MainCtrlDataService', function(PeopleRESTService) {
 	var self = this;
 	self.getPeopleForCtrl = function(params, onCompletion) {
 		PeopleRESTService.getPeopleList(params, function(isValid, response){
@@ -10,7 +11,8 @@ angular.module('myApp', ['MyServicesModule'])
 	};
 })
 
-.controller('MainCtrl', function(FriendsResource, MainCtrlDataService) {
+.controller('MainCtrl', function(MainCtrlDataService, FriendsResource) {
+
 	var self = this;
 
 	// PeopleResource.getPeople({
@@ -30,15 +32,16 @@ angular.module('myApp', ['MyServicesModule'])
 	// 	self.people = response;
 	// }, function onError(error) {
 
+
 	// });
-	
-	MainCtrlDataService.getPeopleForCtrl(null, function(isValid, dataToPresent) {
-		if (isValid){
+
+	MainCtrlDataService.getPeopleForCtrl(null, function (isValid, dataToPresent) {
+		if (isValid) {
 			self.people = dataToPresent;
 		} else {
-			self.error
+			self.errorMessage = "Oopps something went went";
 		}
-	})
+	});
 
 	self.displayFriends = function(person) {
 		FriendsResource.query({
